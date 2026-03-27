@@ -1,0 +1,82 @@
+.featured-large {
+  position: relative;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+  height: clamp(280px, 38vw, 400px);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+}
+
+.featured-large-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.featured-large:hover .featured-large-img {
+  transform: scale(1.04);
+}
+
+.featured-large-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(13, 27, 42, 0.95) 0%,
+    rgba(13, 27, 42, 0.5) 50%,
+    rgba(13, 27, 42, 0.1) 100%
+  );
+}
+
+.featured-large-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: clamp(1rem, 3vw, 1.8rem);
+}
+
+.featured-large-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(1rem, 2.4vw, 1.55rem);
+  font-weight: 800;
+  color: #fff;
+  line-height: 1.25;
+  margin-bottom: 0.5rem;
+  transition: color var(--transition);
+}
+
+.featured-large:hover .featured-large-title {
+  color: var(--gold);
+}
+
+.featured-large-desc {
+  font-size: 0.8rem;
+  color: #a8c4d8;
+  line-height: 1.55;
+  margin-bottom: 0.9rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.btn-featured-read {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.5);
+  color: rgba(255,255,255,0.85);
+  padding: 6px 18px;
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  transition: all var(--transition);
+}
+
+.btn-featured-read:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}

@@ -1,0 +1,14 @@
+.weather-pill {
+  display: flex; align-items: center; gap: 5px;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px; padding: 3px 10px 3px 7px;
+  white-space: nowrap; cursor: default;
+  transition: background 0.2s;
+}
+.weather-pill:hover { background: rgba(255,255,255,0.12); }
+.weather-loading { opacity: 0.4; font-family:'Barlow Condensed',sans-serif; font-size:0.8rem; color:#a8c4d8; }
+.w-icon { font-size:1rem; line-height:1; }
+.w-temp { font-family:'Barlow Condensed',sans-serif; font-weight:700; font-size:0.88rem; color:#fff; letter-spacing:0.5px; }
+.w-city { font-family:'Barlow Condensed',sans-serif; font-size:0.78rem; color:#a8c4d8; letter-spacing:0.5px; }
+@media (max-width:480px) { .w-city { display:none; } }

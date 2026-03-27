@@ -1,0 +1,96 @@
+.category-tabs {
+  background: #fff;
+  border-bottom: 2px solid var(--border);
+  position: sticky;
+  top: 52px;
+  z-index: 99;
+  box-shadow: var(--shadow-sm);
+}
+
+.category-tabs-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+}
+
+/* ── Desktop tab list ─────────────────────────────── */
+.category-tabs-list {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+  flex: 1;
+}
+
+.category-tabs-list::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-weight: 600;
+  font-size: 0.88rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 13px 18px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  border-bottom: 3px solid transparent;
+  margin-bottom: -2px;
+  cursor: pointer;
+  transition: color var(--transition), border-color var(--transition);
+  white-space: nowrap;
+}
+
+.tab-btn:hover:not(.active) {
+  color: var(--navy);
+}
+
+.tab-btn.active {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* ── Mobile select dropdown ───────────────────────── */
+.category-tabs-select {
+  display: none; /* hidden on desktop */
+}
+
+@media (max-width: 640px) {
+  /* Hide pill tabs on small screens */
+  .category-tabs-list {
+    display: none;
+  }
+
+  /* Show native select instead */
+  .category-tabs-select {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 0.88rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--navy);
+    background: #fff;
+    border: none;
+    border-bottom: 3px solid var(--accent);
+    outline: none;
+    cursor: pointer;
+    appearance: auto;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .tab-btn {
+    padding: 11px 12px;
+    font-size: 0.8rem;
+  }
+}

@@ -1,0 +1,139 @@
+/* OverlayCard */
+.overlay-card {
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition);
+}
+
+.overlay-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.overlay-gradient {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(13,27,42,0.92) 0%, transparent 100%);
+}
+
+.overlay-card-title {
+  font-family: 'Playfair Display', serif;
+  color: #fff;
+  line-height: 1.3;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.overlay-card-title:hover {
+  color: var(--gold);
+}
+
+/* TextCard */
+.text-card {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.text-card-img-wrap {
+  flex-shrink: 0;
+  width: 130px;
+  height: 90px;
+  overflow: hidden;
+  border-radius: var(--card-radius);
+}
+
+.text-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.text-card-img-wrap:hover .text-card-img {
+  transform: scale(1.06);
+}
+
+.text-card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.image-top-card {
+  height: 100%;
+}
+
+/* TweetCard */
+.tweet-card {
+  background: var(--accent-blue);
+  border-radius: var(--card-radius);
+  padding: 1.5rem;
+  height: 100%;
+  min-height: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #fff;
+  box-shadow: var(--shadow-sm);
+}
+
+.tweet-x-icon {
+  font-size: 1.8rem;
+  margin-bottom: 0.6rem;
+  opacity: 0.85;
+  line-height: 1;
+}
+
+.tweet-quote {
+  font-family: 'Source Serif 4', serif;
+  font-size: 0.88rem;
+  font-style: italic;
+  line-height: 1.55;
+  flex: 1;
+}
+
+.tweet-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 0.75rem 0;
+}
+
+.tweet-cta {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* HighlightCard */
+.highlight-card {
+  border-radius: var(--card-radius);
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow var(--transition);
+}
+
+.highlight-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.highlight-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 8px;
+}
+
+.highlight-read {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: var(--gold);
+  text-transform: uppercase;
+  transition: color var(--transition);
+}
+
+.highlight-card:hover .highlight-read {
+  color: #fff;
+}
